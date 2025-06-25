@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 44 16% 98%; /* #FFF8F0 */
+  --foreground: 210 15% 20%; /* #2C3E50 */
+  --muted: 44 16% 95%;
+  --muted-foreground: 210 15% 45%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 210 15% 20%;
+  --card: 0 0% 100%;
+  --card-foreground: 210 15% 20%;
+  --border: 210 15% 85%;
+  --input: 210 15% 85%;
+  --primary: 4 82% 69%; /* #FF6B6B coral */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 172 42% 55%; /* #4ECDC4 teal */
+  --secondary-foreground: 0 0% 100%;
+  --accent: 199 76% 55%; /* #45B7D1 sky */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 210 15% 20%;
+  --radius: 1rem;
+  --success: 149 30% 69%; /* #96CEB4 mint */
+  --success-foreground: 210 15% 20%;
+}
+
+.dark {
+  --background: 240 10% 4%;
+  --foreground: 0 0% 98%;
+  --muted: 240 4% 16%;
+  --muted-foreground: 240 5% 65%;
+  --popover: 240 10% 4%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 4%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 4% 16%;
+  --input: 240 4% 16%;
+  --primary: 4 82% 69%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 172 42% 55%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 199 76% 55%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 62% 31%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 5% 84%;
+  --success: 149 30% 69%;
+  --success-foreground: 0 0% 100%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Custom utility classes for the Echoberry theme */
+.bg-coral {
+  background-color: hsl(var(--primary));
+}
+
+.bg-teal {
+  background-color: hsl(var(--secondary));
+}
+
+.bg-sky {
+  background-color: hsl(var(--accent));
+}
+
+.bg-mint {
+  background-color: hsl(var(--success));
+}
+
+.text-coral {
+  color: hsl(var(--primary));
+}
+
+.text-teal {
+  color: hsl(var(--secondary));
+}
+
+.text-sky {
+  color: hsl(var(--accent));
+}
+
+.text-mint {
+  color: hsl(var(--success));
+}
+
+.text-navy {
+  color: hsl(var(--foreground));
+}
+
+.border-coral {
+  border-color: hsl(var(--primary));
+}
+
+.border-teal {
+  border-color: hsl(var(--secondary));
+}
+
+.border-sky {
+  border-color: hsl(var(--accent));
+}
+
+.border-mint {
+  border-color: hsl(var(--success));
+}
+
+/* Hover states */
+.hover\:bg-coral:hover {
+  background-color: hsl(var(--primary));
+}
+
+.hover\:bg-coral\/90:hover {
+  background-color: hsl(var(--primary) / 0.9);
+}
+
+.hover\:text-coral:hover {
+  color: hsl(var(--primary));
+}
+
+.hover\:border-coral\/50:hover {
+  border-color: hsl(var(--primary) / 0.5);
+}
+
+/* Background opacity utilities */
+.bg-coral\/5 {
+  background-color: hsl(var(--primary) / 0.05);
+}
+
+.bg-coral\/10 {
+  background-color: hsl(var(--primary) / 0.1);
+}
+
+.bg-coral\/20 {
+  background-color: hsl(var(--primary) / 0.2);
+}
+
+.bg-teal\/20 {
+  background-color: hsl(var(--secondary) / 0.2);
+}
+
+.bg-sky\/20 {
+  background-color: hsl(var(--accent) / 0.2);
+}
+
+.bg-mint\/20 {
+  background-color: hsl(var(--success) / 0.2);
+}
+
+.bg-mint\/30 {
+  background-color: hsl(var(--success) / 0.3);
+}
+
+.border-coral\/10 {
+  border-color: hsl(var(--primary) / 0.1);
+}
+
+.border-coral\/30 {
+  border-color: hsl(var(--primary) / 0.3);
+}
+
+.border-mint\/30 {
+  border-color: hsl(var(--success) / 0.3);
+}
+
+/* Font families */
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.font-nunito {
+  font-family: "Nunito", sans-serif;
+}

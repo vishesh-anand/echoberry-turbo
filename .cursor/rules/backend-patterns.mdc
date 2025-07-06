@@ -1,0 +1,52 @@
+# Backend Patterns and Best Practices
+
+## Server Structure
+
+- Main entry point: [apps/server/index.ts](mdc:apps/server/index.ts)
+- Routes defined in: [apps/server/routes.ts](mdc:apps/server/routes.ts)
+- Use Express.js with TypeScript
+
+## Database Integration
+
+- Use Drizzle ORM for database operations
+- Database schema defined in [packages/db/src/schema/](mdc:packages/db/src/schema/)
+- Use Supabase as the database provider
+- Follow the pattern in [packages/db/src/index.ts](mdc:packages/db/src/index.ts)
+
+## API Design
+
+- Use RESTful API patterns
+- Implement proper error handling with try-catch blocks
+- Use Zod for request/response validation
+- Return consistent JSON responses
+
+## Authentication
+
+- Integrate with Clerk for authentication
+- Use middleware for route protection
+- Validate JWT tokens from Clerk
+
+## Environment Configuration
+
+- Use environment variables for configuration
+- Follow the pattern in [apps/client/src/lib/config.ts](mdc:apps/client/src/lib/config.ts)
+- Never commit sensitive data to version control
+
+## Error Handling
+
+- Implement proper error middleware
+- Use consistent error response format
+- Log errors appropriately
+- Return appropriate HTTP status codes
+
+## Type Safety
+
+- Use TypeScript strict mode
+- Define proper interfaces for request/response types
+- Use Zod schemas for runtime validation
+- Share types with frontend through [packages/shared/types.ts](mdc:packages/shared/types.ts)
+  description:
+  globs:
+  alwaysApply: false
+
+---

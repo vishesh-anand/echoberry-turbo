@@ -1,0 +1,44 @@
+# TypeScript Patterns and Conventions
+
+## Import Organization
+
+- Use absolute imports with `@/` prefix for src files: `import { Component } from "@/components/ui/button"`
+- Group imports: external libraries first, then internal imports
+- Use named exports over default exports when possible
+
+## Type Safety
+
+- Always use TypeScript strict mode (enabled in [apps/client/tsconfig.json](mdc:apps/client/tsconfig.json))
+- Use Zod for runtime validation and type inference
+- Define shared types in [packages/shared/types.ts](mdc:packages/shared/types.ts)
+- Use `as const` for configuration objects to preserve literal types
+
+## Component Patterns
+
+- Use functional components with hooks
+- Follow shadcn/ui patterns for component composition
+- Use `class-variance-authority` for component variants
+- Implement proper TypeScript interfaces for props
+
+## State Management
+
+- Use TanStack Query for server state management
+- Use React hooks for local state
+- Follow the pattern in [apps/client/src/lib/queryClient.ts](mdc:apps/client/src/lib/queryClient.ts)
+
+## Error Handling
+
+- Use Zod validation for form inputs and API responses
+- Implement proper error boundaries
+- Use TypeScript's strict null checks
+
+## File Naming
+
+- Use kebab-case for file names: `my-component.tsx`
+- Use PascalCase for component names: `MyComponent`
+- Use camelCase for functions and variables
+  description:
+  globs:
+  alwaysApply: false
+
+---

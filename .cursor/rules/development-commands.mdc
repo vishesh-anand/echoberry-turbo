@@ -1,0 +1,86 @@
+# Development Commands and Common Tasks
+
+## Root Level Commands
+
+```bash
+# Install all dependencies
+npm install
+
+# Start development servers
+npm run dev
+
+# Build all packages and apps
+npm run build
+
+# Lint all code
+npm run lint
+
+# Type check all TypeScript files
+npm run check-types
+
+# Format code with Prettier
+npm run format
+```
+
+## Individual App Commands
+
+```bash
+# Client app (React + Vite)
+cd apps/client
+npm run dev      # Start Vite dev server
+npm run build    # Build for production
+npm run preview  # Preview production build
+
+# Server app (Express.js)
+cd apps/server
+npm run dev      # Start development server
+npm start        # Start production server
+```
+
+## Database Commands
+
+```bash
+# Generate migrations
+cd packages/db
+npx drizzle-kit generate
+
+# Push schema changes
+npx drizzle-kit push
+
+# Run migrations
+npx drizzle-kit migrate
+```
+
+## Package Management
+
+```bash
+# Add dependency to specific package
+cd packages/shared
+npm install package-name
+
+# Add dependency to root (shared)
+npm install package-name
+
+# Add dev dependency
+npm install -D package-name
+```
+
+## Common Development Tasks
+
+1. **Adding new UI component**: Create in [apps/client/src/components/ui/](mdc:apps/client/src/components/ui/)
+2. **Adding new page**: Create in [apps/client/src/pages/](mdc:apps/client/src/pages/) and add route
+3. **Adding new API endpoint**: Add to [apps/server/routes.ts](mdc:apps/server/routes.ts)
+4. **Adding new database table**: Create schema in [packages/db/src/schema/](mdc:packages/db/src/schema/)
+5. **Adding shared types**: Add to [packages/shared/types.ts](mdc:packages/shared/types.ts)
+
+## Environment Setup
+
+- Copy `.env.example` to `.env` (if available)
+- Set up Clerk authentication keys
+- Configure Supabase connection
+- Set up database migrations
+  description:
+  globs:
+  alwaysApply: false
+
+---

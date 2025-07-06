@@ -1,0 +1,65 @@
+# UI Component Patterns
+
+## shadcn/ui Components
+
+- Use components from [apps/client/src/components/ui/](mdc:apps/client/src/components/ui/)
+- Follow the established patterns for component composition
+- Use `class-variance-authority` for component variants
+- Implement proper TypeScript interfaces for props
+
+## Styling Guidelines
+
+- Use Tailwind CSS classes exclusively
+- Use `cn()` utility for conditional classes (from [apps/client/src/lib/utils.ts](mdc:apps/client/src/lib/utils.ts))
+- Follow the design system established in the UI components
+- Use semantic color tokens (bg-background, text-foreground, etc.)
+
+## Component Structure
+
+```tsx
+interface ComponentProps {
+  // Define props with proper types
+}
+
+export function Component({ prop1, prop2, ...props }: ComponentProps) {
+  return (
+    <div className={cn("base-classes", props.className)}>
+      {/* Component content */}
+    </div>
+  );
+}
+```
+
+## Accessibility
+
+- Use proper ARIA attributes
+- Implement keyboard navigation
+- Ensure proper focus management
+- Use semantic HTML elements
+- Test with screen readers
+
+## Responsive Design
+
+- Use Tailwind breakpoints: sm, md, lg, xl, 2xl
+- Implement mobile-first design
+- Use responsive utilities for spacing and sizing
+- Test on multiple screen sizes
+
+## Animation
+
+- Use Framer Motion for complex animations
+- Use Tailwind's transition utilities for simple animations
+- Implement proper loading states
+- Use `tailwindcss-animate` for predefined animations
+
+## Form Components
+
+- Use React Hook Form with Zod validation
+- Follow the pattern in wizard components: [apps/client/src/components/wizard/](mdc:apps/client/src/components/wizard/)
+- Implement proper error states and validation feedback
+- Use accessible form labels and descriptions
+  description:
+  globs:
+  alwaysApply: false
+
+---

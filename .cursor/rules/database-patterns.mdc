@@ -1,0 +1,54 @@
+# Database Patterns and Best Practices
+
+## Drizzle ORM Setup
+
+- Main database configuration: [packages/db/src/index.ts](mdc:packages/db/src/index.ts)
+- Schema definitions: [packages/db/src/schema/](mdc:packages/db/src/schema/)
+- Use Supabase as the database provider
+
+## Schema Organization
+
+- Define schemas in separate files under [packages/db/src/schema/](mdc:packages/db/src/schema/)
+- Export schemas from [packages/db/src/schema/index.ts](mdc:packages/db/src/schema/index.ts)
+- Use descriptive table and column names
+- Implement proper relationships between tables
+
+## Type Safety
+
+- Use Drizzle's type inference for database operations
+- Define Zod schemas for validation (see [packages/shared/types.ts](mdc:packages/shared/types.ts))
+- Use `drizzle-zod` for schema-to-Zod conversion
+- Export types for use in other packages
+
+## Migration Management
+
+- Use Drizzle Kit for migrations
+- Store migrations in [packages/db/drizzle/](mdc:packages/db/drizzle/)
+- Run migrations as part of deployment process
+- Version control migration files
+
+## Query Patterns
+
+- Use prepared statements for security
+- Implement proper error handling
+- Use transactions for multi-step operations
+- Optimize queries for performance
+
+## Data Validation
+
+- Use Zod schemas for input validation
+- Validate data before database operations
+- Implement proper error handling for validation failures
+- Use TypeScript for compile-time type checking
+
+## Environment Configuration
+
+- Use environment variables for database connection
+- Never commit database credentials
+- Use different databases for development and production
+- Implement proper connection pooling
+  description:
+  globs:
+  alwaysApply: false
+
+---

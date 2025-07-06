@@ -1,0 +1,54 @@
+# Monorepo Development Workflow
+
+## Package Management
+
+- Root package.json manages workspace dependencies
+- Use `npm install` in root to install all dependencies
+- Individual packages can be managed independently
+- Shared dependencies should be hoisted to root when possible
+
+## Turborepo Commands
+
+- `npm run dev` - Start development servers for all apps
+- `npm run build` - Build all packages and apps
+- `npm run lint` - Lint all packages and apps
+- `npm run check-types` - Type check all TypeScript files
+
+## Package Structure
+
+- **Apps**: Full applications (client, server)
+- **Packages**: Reusable libraries and configurations
+- **Shared packages**: [packages/shared/](mdc:packages/shared/), [packages/ui/](mdc:packages/ui/), [packages/db/](mdc:packages/db/)
+
+## Development Workflow
+
+1. Make changes in individual packages/apps
+2. Use Turborepo for efficient builds and caching
+3. Shared code should go in packages
+4. Apps should import from packages, not duplicate code
+
+## Configuration Sharing
+
+- ESLint config: [packages/eslint-config/](mdc:packages/eslint-config/)
+- TypeScript config: [packages/typescript-config/](mdc:packages/typescript-config/)
+- UI components: [packages/ui/](mdc:packages/ui/)
+- Database schema: [packages/db/](mdc:packages/db/)
+
+## Dependencies
+
+- Keep shared dependencies in root package.json
+- Use workspace: protocol for internal package references
+- Avoid duplicate dependencies across packages
+- Use exact versions for critical dependencies
+
+## Build Optimization
+
+- Turborepo caches build outputs
+- Parallel builds for independent packages
+- Incremental builds for faster development
+- Remote caching for team collaboration
+  description:
+  globs:
+  alwaysApply: false
+
+---

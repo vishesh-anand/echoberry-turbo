@@ -1,0 +1,53 @@
+# React Patterns and Best Practices
+
+## Component Structure
+
+Follow the pattern established in [apps/client/src/App.tsx](mdc:apps/client/src/App.tsx):
+
+- Use functional components with hooks
+- Implement proper TypeScript interfaces for props
+- Use destructuring for props
+- Return JSX with proper TypeScript typing
+
+## Routing
+
+- Use Wouter for routing (see [apps/client/src/App.tsx](mdc:apps/client/src/App.tsx))
+- Define routes in the main App component
+- Use dynamic routes with parameters: `/wizard/:step`
+
+## UI Components
+
+- Use shadcn/ui components from [apps/client/src/components/ui/](mdc:apps/client/src/components/ui/)
+- Follow the component composition pattern
+- Use `cn()` utility for conditional classes
+- Implement proper accessibility with ARIA attributes
+
+## State Management
+
+- Use TanStack Query for server state (configured in [apps/client/src/lib/queryClient.ts](mdc:apps/client/src/lib/queryClient.ts))
+- Use React hooks for local state
+- Implement custom hooks in [apps/client/src/hooks/](mdc:apps/client/src/hooks/)
+
+## Authentication
+
+- Use Clerk for authentication (configured in [apps/client/src/App.tsx](mdc:apps/client/src/App.tsx))
+- Wrap the app with `ClerkProvider`
+- Use Clerk hooks for user management
+
+## Styling
+
+- Use Tailwind CSS classes
+- Follow the design system in [apps/client/src/components/ui/](mdc:apps/client/src/components/ui/)
+- Use `tailwind-merge` for conditional styling
+- Implement responsive design with Tailwind breakpoints
+
+## Form Handling
+
+- Use React Hook Form with Zod validation
+- Follow the pattern in wizard components: [apps/client/src/components/wizard/](mdc:apps/client/src/components/wizard/)
+- Implement proper form validation and error handling
+  description:
+  globs:
+  alwaysApply: false
+
+---

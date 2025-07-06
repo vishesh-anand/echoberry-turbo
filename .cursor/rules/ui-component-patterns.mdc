@@ -60,6 +60,6 @@ export function Component({ prop1, prop2, ...props }: ComponentProps) {
 - Use accessible form labels and descriptions
   description:
   globs:
-  alwaysApply: false
+  alwaysApply: true
 
 ---

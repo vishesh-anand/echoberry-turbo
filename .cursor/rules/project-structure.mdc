@@ -36,6 +36,6 @@ This is a Turborepo monorepo with the following structure:
 - **Styling**: Tailwind CSS with shadcn/ui components
   description:
   globs:
-  alwaysApply: false
+  alwaysApply: true
 
 ---

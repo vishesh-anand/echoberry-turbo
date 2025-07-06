@@ -81,6 +81,6 @@ npm install -D package-name
 - Set up database migrations
   description:
   globs:
-  alwaysApply: false
+  alwaysApply: true
 
 ---

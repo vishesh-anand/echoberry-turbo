@@ -48,6 +48,6 @@ Follow the pattern established in [apps/client/src/App.tsx](mdc:apps/client/src/
 - Implement proper form validation and error handling
   description:
   globs:
-  alwaysApply: false
+  alwaysApply: true
 
 ---

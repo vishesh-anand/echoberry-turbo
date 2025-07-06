@@ -49,6 +49,6 @@
 - Implement proper connection pooling
   description:
   globs:
-  alwaysApply: false
+  alwaysApply: true
 
 ---

@@ -49,6 +49,6 @@
 - Remote caching for team collaboration
   description:
   globs:
-  alwaysApply: false
+  alwaysApply: true
 
 ---

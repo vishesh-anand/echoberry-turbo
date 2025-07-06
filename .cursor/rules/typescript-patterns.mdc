@@ -39,6 +39,6 @@
 - Use camelCase for functions and variables
   description:
   globs:
-  alwaysApply: false
+  alwaysApply: true
 
 ---

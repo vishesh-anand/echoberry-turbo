@@ -47,6 +47,6 @@
 - Share types with frontend through [packages/shared/types.ts](mdc:packages/shared/types.ts)
   description:
   globs:
-  alwaysApply: false
+  alwaysApply: true
 
 ---
